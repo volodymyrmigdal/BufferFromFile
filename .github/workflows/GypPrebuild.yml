@@ -3,7 +3,7 @@ name : prebuild
 
 on :
   push :
-    branches : [ master ]
+    branches : [ config ]
 
 jobs :
 
@@ -43,4 +43,5 @@ jobs :
     - run : npm i --ignore-scripts
     - run : npm list
     - run : npm run node-pre-gyp-build
+    - run : npm test
     - run : npm run node-pre-gyp-package && npm run node-pre-gyp-github-release
